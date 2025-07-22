@@ -1,0 +1,10 @@
+# Seção de configuração do "build" (processo de construção)
+[build]
+  # Comando que o Netlify irá executar para construir o site.
+  # Usamos "npm run build" pois é o script que definimos no package.json.
+  # Ele executará o "node generate-env.js" para nós.
+  command = "npm run build"
+
+  # Pasta que contém o site final a ser publicado.
+  # Como nosso index.html está na raiz, usamos "/".
+  publish = "/"

@@ -1,14 +1,10 @@
 {
-  "name": "controle-gastos",
+  "name": "controle-de-gastos",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "build": "node generate-env.js"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "sqlite3": "^5.1.6"
+  "devDependencies": {
+    "dotenv": "^16.4.5"
   }
 }
