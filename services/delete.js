@@ -1,6 +1,6 @@
 // services/delete.js
 import { API_URL } from '../api.js';
-console.log(API_URL);
+console.log("appiiii",API_URL);
 
 
 export async function deleteGasto(id) {
