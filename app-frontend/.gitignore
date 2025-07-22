@@ -1,0 +1,7 @@
+# .gitignore
+
+node_modules/
+api.js
+
+# Ignorar arquivos de variáveis de ambiente locais
+.env
