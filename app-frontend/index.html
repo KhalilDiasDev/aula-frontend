@@ -10,16 +10,15 @@
   <div class="container">
     <h1>Controle de Gastos</h1>
     <form id="gasto-form">
-      <input id="descricao" type="text" placeholder="Descrição" required />
-      <input id="valor" type="number" step="0.01" placeholder="Valor" required />
+      <input type="hidden" id="gasto-id" />
       <input id="categoria" type="text" placeholder="Categoria" />
+      <input id="valor" type="number" step="0.01" placeholder="Valor" required />
+      <input id="descricao" type="text" placeholder="Descrição" required />
       <button type="submit">Adicionar</button>
     </form>
     <ul id="gastos-list"></ul>
   </div>
-  <script src="get.js"></script>
-  <script src="post.js"></script>
-  <script src="put.js"></script>
-  <script src="delete.js"></script>
+
+  <script src="main.js" type="module"></script>
 </body>
 </html>

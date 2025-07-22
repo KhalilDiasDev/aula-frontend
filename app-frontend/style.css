@@ -1,0 +1,198 @@
+/* style.css */
+
+/* --- FONTES DO GOOGLE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* --- VARIÁVEIS DE CORES E ESTILOS (RAIZ) --- */
+/* Facilita a mudança do tema do site depois */
+:root {
+  --color-background: #0D1117; /* Fundo principal (quase preto) */
+  --color-surface: #161B22;   /* Cor das 'superfícies', como cards e formulários */
+  --color-primary-text: #E6EDF3; /* Cor do texto principal (branco suave) */
+  --color-secondary-text: #8B949E; /* Cor do texto secundário (cinza) */
+  --color-accent: #30C8D6;       /* Cor de destaque (ciano tecnológico) */
+  --color-accent-glow: rgba(48, 200, 214, 0.3); /* Brilho da cor de destaque */
+  --color-border: #30363D;       /* Cor das bordas */
+  --color-danger: #F85149;       /* Cor para ações de perigo (deletar) */
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-monospace: 'Roboto Mono', monospace;
+
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* --- RESET E ESTILOS GERAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-accent);
+  /* Efeito de brilho neon no título */
+  text-shadow: 0 0 10px var(--color-accent-glow), 0 0 20px var(--color-accent-glow);
+}
+
+/* --- FORMULÁRIO --- */
+#gasto-form {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+  gap: 15px;
+  margin-bottom: 40px;
+  background: var(--color-surface);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+#gasto-form input {
+  flex-grow: 1; /* Faz os inputs crescerem para ocupar o espaço */
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 12px 15px;
+  color: var(--color-primary-text);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: all var(--transition-speed) ease;
+}
+
+#gasto-form input::placeholder {
+  color: var(--color-secondary-text);
+}
+
+/* Efeito de foco nos inputs */
+#gasto-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+#gasto-form button {
+  background: var(--color-accent);
+  color: var(--color-background);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 25px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+/* Efeito de hover no botão do formulário */
+#gasto-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--color-accent-glow);
+}
+
+/* --- LISTA DE GASTOS --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#gastos-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#gastos-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Efeito de hover nos itens da lista */
+#gastos-list li:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ELEMENTOS DENTRO DOS ITENS DA LISTA --- */
+.gasto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.gasto-descricao {
+  font-weight: 400;
+}
+
+.gasto-id {
+  font-family: var(--font-monospace);
+  color: var(--color-secondary-text);
+  font-size: 0.8rem;
+}
+
+.gasto-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  padding: 5px;
+  transition: all var(--transition-speed) ease;
+}
+
+/* Efeitos de hover nos botões de ação */
+.gasto-actions .edit-btn:hover {
+  color: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.gasto-actions .delete-btn:hover {
+  color: var(--color-danger);
+  transform: scale(1.2);
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #gasto-form {
+    flex-direction: column;
+  }
+}
