@@ -3,7 +3,7 @@ import { API_URL } from '../api.js';
 
 export async function updateGasto(id, gasto) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/api/gastos/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

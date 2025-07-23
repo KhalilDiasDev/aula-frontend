@@ -3,7 +3,7 @@ import { API_URL } from '../api.js';
 
 export async function addGasto(gasto) {
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL}/api/gastos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

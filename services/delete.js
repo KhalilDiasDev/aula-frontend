@@ -5,7 +5,7 @@ console.log("appiiii",API_URL);
 
 export async function deleteGasto(id) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/api/gastos/${id}`, {
       method: 'DELETE',
     });
     console.log('id',id);
