@@ -50,16 +50,15 @@ Certifique-se de que a extensão Live Server está instalada no VSCode.
 📁 Estrutura do projeto
 ```
 aula-frontend/
-├── index.html
-├── style/
-│   └── style.css
-├── js/
+├── services/
 │   ├── get.js
 │   ├── post.js
 │   ├── put.js
 │   ├── delete.js
 │   └── main.js
 ├── .env
+├── index.html
+├── style.css
 └── package.json
 
 ```
