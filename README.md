@@ -45,7 +45,7 @@ Abra o projeto no VSCode, clique com o botão esquerdo em index.html e selecione
 ```
 <img width="1856" height="981" alt="image" src="https://github.com/user-attachments/assets/72a1d933-afa3-4e37-9564-48dd3d8890c3" />
 
-Certifique-se de que a extensão Live Server está instalada no VSCode.
+⚠️ Certifique-se de que a extensão Live Server está instalada no VSCode.
 
 📁 Estrutura do projeto
 ```
