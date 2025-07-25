@@ -20,6 +20,7 @@ Este projeto é um exemplo prático desenvolvido durante a aula de programação
 ```bash
 git clone https://github.com/KhalilDiasDev/aula-frontend.git
 cd aula-frontend
+```
 2. Instale as dependências (apenas para organização do projeto)
 bash
 Copy
