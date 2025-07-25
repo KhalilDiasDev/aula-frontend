@@ -17,39 +17,38 @@ Este projeto é um exemplo prático desenvolvido durante a aula de programação
 
 ### 1. Clone o repositório
 
-```bash
+
 git clone https://github.com/KhalilDiasDev/aula-frontend.git
 cd aula-frontend
+ ### 2. Instale as dependências (apenas para organização do projeto)
 ```
-2. Instale as dependências (apenas para organização do projeto)
-bash
-Copy
-Edit
 npm install
+```
 ⚠️ As dependências são apenas para organização (como eslint). O frontend roda apenas com HTML/CSS/JS.
 
-3. Configure a variável de ambiente
+### 3. Configure a variável de ambiente
 Crie um arquivo .env na raiz do projeto e adicione a seguinte linha:
-
-env
-Copy
-Edit
+```
 API_URL=http://localhost:3000
+```
 Essa variável define a URL da API do backend.
 
-4. Rode o projeto
-Abra o projeto no VSCode, clique com o botão direito em index.html e selecione:
+Para cofigurala localmente execute o seguinte comando:
+```
+npm run build
+```
 
-bash
-Copy
-Edit
-"Open with Live Server"
+### 4. Rode o projeto
+Abra o projeto no VSCode, clique com o botão esquerdo em index.html e selecione:
+```
+"Go Live"
+```
+<img width="1856" height="981" alt="image" src="https://github.com/user-attachments/assets/72a1d933-afa3-4e37-9564-48dd3d8890c3" />
+
 Certifique-se de que a extensão Live Server está instalada no VSCode.
 
 📁 Estrutura do projeto
-pgsql
-Copy
-Edit
+```
 aula-frontend/
 ├── index.html
 ├── style/
@@ -62,6 +61,8 @@ aula-frontend/
 │   └── main.js
 ├── .env
 └── package.json
+
+```
 💡 Observações
 O backend deve estar rodando localmente na porta 3000.
 
